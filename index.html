@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator | Arsl Thaheem</title>
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: aqua;
+        }
+
+        .cal-body {
+            width: 350px;
+            height: 550px;
+            background-color: rgb(168, 168, 168);
+            margin: 50px auto;
+            border: 3px solid black;
+            border-radius: 20px;
+            padding: 0px 10px;
+        }
+
+        #screen {
+            width: 98%;
+            height: 70px;
+            display: block;
+            direction: rtl;
+            font-size: 32px;
+            margin: 20px auto;
+            border: 2px solid gray;
+            padding-right: 10px;
+            padding-left: 10px;
+            cursor: default;
+            border-radius: 10px;
+        }
+
+        .number {
+            display: inline-block;
+            width: 68px;
+            height: 75px;
+            font-size: 30px;
+            margin: 5px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        #c {
+            background-color: red;
+            color: white;
+        }
+
+        #equal {
+            width: 150px;
+        }
+        h1{
+            color: red;
+            font-weight: bolder;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Simple Calculator </h1>
+    <div class="cal-body">
+        <form action="">
+            <input type="text" id="screen" placeholder="Calculator By Arsl  0" maxlength="15" readonly
+                autocomplete="off" value="">
+            <input type="reset" value="C" id="c" class="number">
+            <input type="button" value="(" id="number" class="number" onclick="answer.value += ')'">
+            <input type="button" value=")" id="number" class="number" onclick="answer.value += '('">
+            <input type="button" value="/" id="number" class="number" onclick="answer.value += '/'">
+            <input type="button" value="7" id="number" class="number" onclick="answer.value += '7'">
+            <input type="button" value="8" id="number" class="number" onclick="answer.value += '8'">
+            <input type="button" value="9" id="number" class="number" onclick="answer.value += '9'">
+            <input type="button" value="x" id="number" class="number" onclick="answer.value += '*'">
+            <input type="button" value="4" id="number" class="number" onclick="answer.value += '4'">
+            <input type="button" value="5" id="number" class="number" onclick="answer.value += '5'">
+            <input type="button" value="6" id="number" class="number" onclick="answer.value += '6'">
+            <input type="button" value="+" id="number" class="number" onclick="answer.value += '+'">
+            <input type="button" value="1" id="number" class="number" onclick="answer.value += '1'">
+            <input type="button" value="2" id="number" class="number" onclick="answer.value += '2'">
+            <input type="button" value="3" id="number" class="number" onclick="answer.value += '3'">
+            <input type="button" value="-" id="number" class="number" onclick="answer.value += '-'">
+            <input type="button" value="0" id="number" class="number" onclick="answer.value += '0'">
+            <input type="button" value="." id="number" class="number" onclick="answer.value += '.'">
+            <input type="button" value="=" id="equal" class="number" onclick="answer.value = eval(answer.value)">
+        </form>
+    </div>
+
+    <script>
+        var answer = document.getElementById("screen");
+
+    </script>
+</body>
+
+</html>
